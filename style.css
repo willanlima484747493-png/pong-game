@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #00ff88;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px rgba(0, 255, 136, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.6);
+    }
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+}
+
+.player-score,
+.computer-score {
+    text-align: center;
+    color: #00ff88;
+}
+
+.player-score h2,
+.computer-score h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.player-score p,
+.computer-score p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.game-status {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+#gameCanvas {
+    background: #000000;
+    border: 3px solid #00ff88;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.controls {
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.controls p {
+    margin: 5px 0;
+}
+
+.controls strong {
+    color: #00ff88;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #gameCanvas {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .controls {
+        font-size: 0.85em;
+    }
+}
